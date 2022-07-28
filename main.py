@@ -118,5 +118,9 @@ speed_start, speed_end = col1_down.select_slider(
 col2_down.dataframe(df.loc[
      (df['Brand'].isin(brand_sel)) &
      (df['Country'].isin(country_sel)) &
-     (df['Year'].between(year_start, year_end))
+     (df['Year'].between(year_start, year_end)) &
+     (df['Power (CV)'].between(power_start, power_end)) &
+     (df['Fuel consumption (l/100km)'].between(fuel_start, fuel_end)) &
+     (df['Displacement (cc)'].between(disp_start, disp_end)) &
+     (df['Top speed (km/h)'].between(speed_start, speed_end))
      ],height=700)
